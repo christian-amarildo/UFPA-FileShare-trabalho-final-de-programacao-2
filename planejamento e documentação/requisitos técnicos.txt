@@ -1,0 +1,106 @@
+📚 UFPA FileShare - Plataforma Colaborativa Acadêmica
+📌 1. Justificativa e Motivação
+Facilitar o acesso a materiais acadêmicos, estimulando colaboração entre alunos.
+Incentivar participação ativa dos alunos na produção e compartilhamento de conteúdos acadêmicos.
+Promover integração e troca de conhecimentos de forma gamificada.
+🎯 2. Objetivos
+Objetivo Geral:
+
+Criar uma plataforma acadêmica colaborativa que recompense a troca de materiais educativos entre alunos da UFPA.
+Objetivos Específicos:
+
+Desenvolver um sistema de gestão eficiente para compartilhamento de arquivos acadêmicos.
+Implementar mecanismos de bonificação para incentivar uploads de qualidade.
+Garantir uma boa experiência de usuário com interface intuitiva.
+📐 3. Elicitação de Requisitos
+📌 Requisitos Funcionais:
+RF01: Usuário pode se cadastrar, fazer login e logout.
+RF02: Usuário pode fazer upload de arquivos acadêmicos (PDF, DOCX, PPT, etc.).
+RF03: Usuário pode baixar arquivos após acumular bonificações (créditos).
+RF04: Avaliar arquivos baixados com comentários e estrelas (1 a 5).
+RF05: Usuários recebem créditos por materiais aprovados por moderadores ou bem-avaliados por usuários.
+RF06: Busca por título, autor, curso ou tipo de arquivo.
+RF07: Dashboard de usuário mostrando arquivos compartilhados, baixados e créditos disponíveis.
+RF08: Administração com moderação de conteúdos e usuários.
+📌 Requisitos Não-Funcionais:
+RNF01: Sistema deve ter boa performance e tempo rápido de resposta (usabilidade).
+RNF02: Interface gráfica intuitiva e amigável (UX/UI).
+RNF03: Compatibilidade multiplataforma (Windows/Linux/Mac).
+RNF04: Segurança e privacidade de dados (criptografia básica).
+RNF05: Código modular e reutilizável (uso de padrões de projeto).
+📑 4. Diagramação UML
+Diagramas exigidos pelo professor:
+
+Casos de Uso (Login, Upload, Download, Avaliar arquivos, Moderar arquivos).
+Diagrama de Classes (com Herança, Interface, Enum, etc.).
+Diagrama de Sequência (ex: upload/download de arquivo).
+Diagrama de Atividades (ex: Bonificação ao Upload/Download).
+Exemplo básico das classes principais:
+
+Usuario (abstract)
+
+Aluno (herda Usuario)
+Moderador (herda Usuario)
+Arquivo
+
+atributos: nome, tipo, autor, dataUpload, avaliação, créditosNecessarios.
+Bonificacao (Interface)
+
+método: calcularCredito()
+CreditoUsuario (implementar interface Bonificacao)
+
+TipoArquivo (Enum: PDF, DOCX, PPT, etc.)
+
+⚙️ 5. Estrutura Técnica e Implementação
+📌 Tecnologias sugeridas:
+Linguagem: Java
+Framework GUI: Java Swing ou JavaFX
+Gerenciador de Dependências: Maven
+Persistência de Dados: MySQL ou SQLite
+Testes: JUnit 4
+💻 6. Atendendo aos Requisitos Técnicos Específicos do Professor
+Estrutura obrigatória proposta:
+Item	Descrição	Exemplo prático na aplicação
+a	Dez classes (mínimo)	Usuario, Aluno, Moderador, Arquivo, Sistema, CreditoUsuario, Avaliacao, Bonificacao (interface), TipoArquivo (enum), BancoDados, UploadController, DownloadController
+b	Dois métodos estáticos	validarFormatoArquivo(), gerarIdArquivo()
+c	Duas constantes	MAX_CREDITOS_POR_ARQUIVO, MIN_AVALIACAO
+d	Dois métodos abstratos	Usuario.login(), Usuario.logout()
+e	Uma interface	Bonificacao (com método calcularCredito())
+f	Estruturas (Array/ArrayList)	Array (ex.: tipos suportados), ArrayList (ex.: listaArquivos, listaUsuarios)
+g	Um enum	TipoArquivo (PDF, DOCX, PPT, OUTROS)
+h	Tratamento de exceção	Exceção de upload/download inválido
+i	Composição entre classes	Usuario possui Arquivos
+j	Herança entre classes	Aluno e Moderador herdam Usuario
+k	Polimorfismo	método calcularCredito() implementado em diferentes contextos
+l	Padrão de projeto	Singleton (controle sessão/login), Observer (notificar usuários sobre uploads novos), Strategy (diversos cálculos de bonificação)
+📊 7. Sugestão de Gamificação e Bonificação
+Sistema de Créditos:
+Cada upload aprovado ou bem-avaliado gera créditos.
+Downloads gastam créditos.
+Usuários com reputação alta têm benefícios adicionais.
+🚀 8. Modelo de Desenvolvimento (Kanban)
+Colunas sugeridas:
+
+Backlog → Em desenvolvimento → Em testes → Revisão → Concluído
+📋 9. Testes Computacionais
+Criar testes unitários (JUnit 4) para:
+Login/logout.
+Upload/download de arquivos.
+Bonificações e créditos.
+Tratamento de exceções.
+💰 10. Precificação (opcional e simbólica)
+Simulação de custos de desenvolvimento (Horas x Valor/hora)
+Valor simbólico para manutenção ou hospedagem (opcional)
+📝 11. Relatório Técnico
+Mínimo de 15 páginas, detalhando claramente:
+Introdução, objetivos, justificativa.
+Requisitos detalhados (funcionais/não funcionais).
+Diagramas UML explicados.
+Ambiente de desenvolvimento.
+Testes realizados.
+Conclusões finais e referências numéricas.
+📦 12. GitHub e Entrega
+Criar um repositório GitHub claro, com README, documentação detalhada e código comentado.
+🎯 Conclusão: Essa estrutura atende perfeitamente às exigências do projeto, garantindo clareza técnica, praticidade de implementação e qualidade final.
+
+Se precisar de detalhamento maior de algum tópico, ou começar a implementação por algum módulo específico, estou à disposição para ajudar!
