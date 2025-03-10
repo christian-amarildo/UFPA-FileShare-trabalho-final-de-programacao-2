@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Sistema {
+public class Sistema implements SystemMethods {
     // Atributo
     private ArrayList<User> users;  // Lista de usuários no sistema
 
