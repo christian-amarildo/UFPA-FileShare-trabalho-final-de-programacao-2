@@ -48,7 +48,7 @@ public class Sistema implements SystemMethods {
         }
     }
 
-    public static void systemRun() {
+    public void systemRun() {
         Scanner sc = new Scanner(System.in);
 
         // Criando alguns usuários para registrar no sistema
